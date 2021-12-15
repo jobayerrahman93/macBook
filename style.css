@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+.responsive-bars {
+  display: none;
+}
+
+ul li {
+  list-style: none;
+  display: inline;
+}
+
+ul li a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+  margin-left: 44px;
+  font-weight: 600;
+}
+
+ul li a:hover {
+  color: rgb(63, 61, 61);
+}
+input {
+  padding-left: 40px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #ecf0f1;
+  border: none;
+  outline: none;
+  width: 130px;
+}
+
+nav .input-icons i {
+  position: absolute;
+}
+
+nav .input-icons {
+  margin-bottom: 10px;
+}
+.responsive-search {
+  display: none;
+}
+
+.icon {
+  color: gray;
+  min-width: 50px;
+  padding-top: 8px;
+  text-align: center;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+
+/* Home Section */
+
+.home {
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 50px;
+  color: #000;
+  font-weight: 700;
+  margin-top: 70px;
+}
+.home span {
+  color: #004586;
+}
+
+button {
+  background-color: #004586;
+  color: #fff;
+  font-size: 17px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-weight: 500;
+}
+.home p {
+  color: #a9a9a9;
+  margin: 30px 0;
+}
+
+/* READING BOOK SECTION */
+
+.book {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 40px 100px;
+}
+
+.book img {
+  object-fit: cover;
+  width: 100%;
+  height: 350px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.book-icon {
+  display: flex;
+  margin: 30px 0;
+  justify-content: start;
+}
+.book-icon i {
+  font-size: 20px;
+  color: #a9a9a9;
+  margin-left: 23px;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.book-icon i:hover {
+  color: #000;
+  transform: scale(1.4);
+}
+
+.book h3 {
+  color: #004586;
+}
+.book h1 {
+  font-size: 30px;
+  color: #000;
+  font-weight: 700;
+}
+
+.lorem-side {
+  padding: 30px;
+  text-align: center;
+}
+.lorem-side .right p {
+  margin-right: 85px;
+  padding-bottom: 10px;
+}
+/* .lorem-side div {
+  border: 1px solid black;
+} */
+
+.lorem-side .right {
+  width: 485px;
+  padding: 20px 10px 10px 20px;
+  margin-left: -130px;
+  text-align: left;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+/* Featured Section */
+
+.featured {
+  margin: 40px 100px;
+  background-color: #004687;
+  height: 70vh;
+  border-radius: 15px;
+  padding: 30px 30px;
+}
+.featured h1 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.writers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  text-align: center;
+  grid-row-gap: 80px;
+  margin-top: 50px;
+}
+
+.writers img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  transition: 0.5s ease-in-out;
+}
+.writers img:hover {
+  transform: scale(1.3);
+}
+
+.writers h3 {
+  color: #fff;
+  margin-top: 10px;
+}
+
+/* For mobile phones: */
+
+@media only screen and (max-width: 600px) {
+  .book {
+    grid-template-columns: 1fr;
+    margin: 0;
+  }
+  .book img {
+    height: 350px;
+  }
+
+  .book-image {
+    width: 100%;
+  }
+
+  .featured {
+    margin: 40px 20px;
+    height: 90vh;
+    padding: 30px 10px;
+  }
+  .writers {
+    grid-template-columns: 1fr 1fr;
+  }
+  .lorem-side {
+    width: 300px;
+
+    margin-left: -14px;
+  }
+  .lorem-side .right {
+    width: 329px;
+    padding: 10px;
+    margin-top: -100px;
+    margin-left: 0px;
+  }
+
+  .lorem-side .right p {
+    margin-right: 12px;
+  }
+
+  .book-icon {
+    margin-left: 78px;
+  }
+
+  /* nav */
+
+  .responsive-bars {
+    display: block;
+  }
+
+  .main-navlink {
+    display: none;
+  }
+  .responsive-search {
+    display: block;
+  }
+  .responsive-search i {
+    color: #000;
+  }
+
+  .input-icons {
+    display: none;
+  }
+
+  /* home */
+  .home {
+    padding-bottom: 80px;
+  }
+
+  .home h1 {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
